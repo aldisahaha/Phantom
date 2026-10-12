@@ -1,0 +1,488 @@
+
+:root {
+    --text: #ffffff;
+    --secondary: #b8b8b8;
+    --border: #383838;
+    --background: #000000;
+    --soft: #080808;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.checkout-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    border-bottom: 1px solid var(--border);
+    animation: slide-down 0.5s ease both;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.logo span {
+    margin-left: 2px;
+    font-size: 12px;
+    vertical-align: top;
+}
+
+.back-link {
+    color: var(--secondary);
+    font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--text);
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+    gap: 9%;
+    width: min(1100px, 84%);
+    margin: 65px auto 100px;
+    animation: fade-up 0.6s ease both;
+}
+
+.eyebrow {
+    margin-bottom: 14px;
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(40px, 5vw, 62px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+h1 span {
+    color: #999999;
+}
+
+.intro {
+    margin: 15px 0 35px;
+    color: var(--secondary);
+    font-size: 13px;
+}
+
+form h2,
+.order-summary h2 {
+    margin-bottom: 20px;
+    font-size: 17px;
+    letter-spacing: -0.4px;
+}
+
+form label:not(.delivery-option) {
+    display: block;
+    margin: 17px 0 7px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+form input:not([type="radio"]) {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid #444444;
+    border-radius: 0;
+    background: var(--soft);
+    color: var(--text);
+    font-size: 12px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+form input:focus {
+    border-color: #c0c0c0;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(192, 192, 192, 0.1);
+}
+
+form input::placeholder {
+    color: #999999;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.input-row > div {
+    min-width: 0;
+}
+
+.shipping-heading {
+    margin-top: 36px;
+}
+
+.delivery-option {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 12px 0;
+    padding: 16px;
+    border: 1px solid var(--border);
+    background: var(--background);
+    cursor: pointer;
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.delivery-option:has(input:checked) {
+    border-color: #c0c0c0;
+    background: var(--soft);
+}
+
+.delivery-option input {
+    accent-color: #c0c0c0;
+}
+
+.delivery-option span {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.delivery-option strong {
+    font-size: 12px;
+}
+
+.delivery-option small {
+    color: var(--secondary);
+    font-size: 10px;
+}
+
+.delivery-option b {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.place-order-button,
+.continue-button {
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    padding: 17px;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    color: #000000;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.place-order-button:hover,
+.continue-button:hover {
+    transform: translateY(-2px);
+    background: #c0c0c0;
+    color: #000000;
+}
+
+.demo-note {
+    margin-top: 13px;
+    color: var(--secondary);
+    font-size: 10px;
+    text-align: center;
+}
+
+.order-summary {
+    align-self: start;
+    padding: 28px;
+    border: 1px solid var(--border);
+    background: var(--soft);
+}
+
+.order-summary h2 {
+    margin-bottom: 24px;
+}
+
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--border);
+    animation: fade-up 0.35s ease both;
+}
+
+.checkout-item h3 {
+    font-size: 12px;
+}
+
+.checkout-item p {
+    margin-top: 4px;
+    color: var(--secondary);
+    font-size: 11px;
+}
+
+.checkout-item strong {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.summary-line,
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 18px;
+    font-size: 12px;
+}
+
+.summary-total {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 15px;
+}
+
+.summary-footnote {
+    margin-top: 22px;
+    color: var(--secondary);
+    font-size: 10px;
+}
+
+.confirmation {
+    width: min(560px, 88%);
+    margin: 90px auto;
+    text-align: center;
+    animation: fade-up 0.6s ease both;
+}
+
+.confirmation[hidden] {
+    display: none;
+}
+
+.confirmation-icon {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 25px;
+    border: 1px solid var(--text);
+    border-radius: 50%;
+    color: #c0c0c0;
+    font-size: 28px;
+    animation: pop-in 0.5s ease both;
+}
+
+.confirmation-message {
+    margin: 18px 0 30px;
+    color: var(--secondary);
+    font-size: 13px;
+}
+
+.confirmation-card {
+    padding: 28px;
+    border: 1px solid var(--border);
+    background: var(--soft);
+    text-align: left;
+}
+
+.confirmation-card > span {
+    display: block;
+    color: var(--secondary);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.confirmation-card > strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.confirmation-divider {
+    margin: 22px 0;
+    border-top: 1px solid var(--border);
+}
+
+.continue-button {
+    margin-top: 22px;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 800px) {
+    .checkout-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        width: 88%;
+        margin-top: 45px;
+    }
+
+    .order-summary {
+        grid-row: 1;
+    }
+
+    .checkout-nav {
+        padding: 18px 6%;
+    }
+
+    .confirmation {
+        margin: 60px auto;
+    }
+}
+
+@media (max-width: 420px) {
+    .checkout-layout {
+        width: 90%;
+    }
+
+    .input-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .order-summary {
+        padding: 20px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+:root {
+    color-scheme: dark;
+}
+
+::selection {
+    background: #c0c0c0;
+    color: #000000;
+}
+
+form select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #444;
+    border-radius: 0;
+    background-color: #080808;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    appearance: auto;
+    cursor: pointer;
+}
+
+form select:focus {
+    border-color: #c0c0c0;
+    outline: none;
+}
+
+form select option {
+    background-color: #080808;
+    color: #fff;
+}
+
+form select optgroup {
+    background-color: #080808;
+    color: #c0c0c0;
+}
+
+#customer-city {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #444;
+    border-radius: 0;
+    background: #080808;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#customer-city:focus {
+    border-color: #c0c0c0;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(192, 192, 192, 0.1);
+}
+
+#customer-city::placeholder {
+    color: #999;
+}

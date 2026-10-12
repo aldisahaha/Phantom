@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Receipt — Phantom®</title>
+    <link rel="stylesheet" href="receipt.css">
+    <script src="receipt.js" defer></script>
+</head>
+<body>
+    <header class="receipt-nav">
+        <a href="index.html" class="logo">Phantom<span>®</span></a>
+        <span>ORDER RECEIPT</span>
+    </header>
+
+    <main class="receipt-container">
+        <div class="receipt-status">
+            <div class="receipt-check">✓</div>
+            <p class="eyebrow">PHANTOM® / ORDER COMPLETE</p>
+            <h1>Thank you<span>.</span></h1>
+            <p class="receipt-intro">
+                Your demo order has been recorded successfully.
+            </p>
+        </div>
+
+        <section class="receipt-card">
+            <div class="receipt-top">
+                <div>
+                    <p class="eyebrow">ORDER NUMBER</p>
+                    <h2 id="receipt-order-number">—</h2>
+                </div>
+                <span class="demo-badge">DEMO ORDER</span>
+            </div>
+
+            <p class="receipt-date" id="receipt-date"></p>
+
+            <hr>
+
+            <h2>Customer information</h2>
+            <div class="receipt-details">
+                <div>
+                    <span>Full name</span>
+                    <strong id="receipt-name"></strong>
+                </div>
+                <div>
+                    <span>Email</span>
+                    <strong id="receipt-email"></strong>
+                </div>
+                <div>
+                    <span>Phone</span>
+                    <strong id="receipt-phone"></strong>
+                </div>
+                <div>
+                    <span>Shipping address</span>
+                    <strong id="receipt-address"></strong>
+                </div>
+                <div>
+                    <span>City / Municipality</span>
+                    <strong id="receipt-city"></strong>
+                </div>
+                <div>
+                    <span>Postal code</span>
+                    <strong id="receipt-postal"></strong>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>Items ordered</h2>
+            <div id="receipt-items"></div>
+
+            <hr>
+
+            <div class="receipt-details">
+                <div>
+                    <span>Delivery method</span>
+                    <strong id="receipt-delivery"></strong>
+                </div>
+                <div>
+                    <span>Subtotal</span>
+                    <strong id="receipt-subtotal"></strong>
+                </div>
+                <div>
+                    <span>Delivery fee</span>
+                    <strong id="receipt-shipping"></strong>
+                </div>
+            </div>
+
+            <div class="receipt-total">
+                <span>Total</span>
+                <strong id="receipt-total"></strong>
+            </div>
+
+            <p class="receipt-notice">
+                This is a demo receipt. No payment was collected and no
+                physical order was placed or shipped.
+            </p>
+        </section>
+
+        <div class="receipt-actions">
+            <button type="button" id="print-receipt">PRINT RECEIPT</button>
+            <a href="index.html" class="continue-button">
+                CONTINUE SHOPPING →
+            </a>
+        </div>
+    </main>
+
+    <footer class="receipt-footer">
+        PHANTOM® — BUILT FOR EVERYDAY.
+    </footer>
+</body>
+</html>
